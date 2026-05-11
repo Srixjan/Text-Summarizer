@@ -275,18 +275,6 @@ User Request
 Response (JSON / HTML)
 ```
 
-## 🚀 Future Improvements
-
-- [ ] Add authentication and rate limiting
-- [ ] Support multiple languages
-- [ ] Add adjustable summary length slider in UI
-- [ ] Implement model caching and optimization
-- [ ] Add Docker containerization
-- [ ] Support streaming responses for long texts
-- [ ] Add support for other model architectures (BART, Pegasus, etc.)
-- [ ] Create PyPI package for easier installation
-- [ ] Add unit tests and CI/CD pipeline
-
 ## 📝 License
 
 This project is provided as-is for educational purposes.
