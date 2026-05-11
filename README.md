@@ -13,7 +13,20 @@ A small FastAPI web app and frontend to generate concise summaries from input te
 - index.html — Minimal frontend UI
 - saved_summary_model/ — locally saved model and tokenizer files
 
-Files in `saved_summary_model/` should include model binaries and tokenizer files (e.g., `model.safetensors`, `tokenizer.json`).
+Model files are NOT included in this repository due to their large size. If you have a compatible T5-style model, place its files in a folder named `saved_summary_model/` at the project root (examples: `model.safetensors`, `tokenizer.json`).
+
+If you want to store the model in this repo, use Git Large File Storage (Git LFS):
+
+```bash
+git lfs install
+git lfs track "saved_summary_model/model.safetensors"
+git add .gitattributes
+git add saved_summary_model/
+git commit -m "Add model via Git LFS"
+git push origin main
+```
+
+Alternatively, modify `app.py` to load a model directly from the Hugging Face Hub by model name instead of a local folder.
 
 ## Requirements
 
@@ -70,4 +83,4 @@ Response:
 - Add longer-context handling or instruction prompting for different summary styles.
 
 ---
-If you want, I can add a `requirements.txt`, a Dockerfile, or tune the README further. 
+If you want, I can add a `requirements.txt`, a Dockerfile, or update `app.py` to load models from Hugging Face directly.
